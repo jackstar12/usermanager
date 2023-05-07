@@ -5,7 +5,7 @@ from typing import Optional
 from fastapi.param_functions import Query
 from pydantic import BaseModel
 
-from lnbits.db import FilterModel
+#from lnbits.db import FilterModel
 
 
 class Operator(Enum):
@@ -63,7 +63,7 @@ class User(BaseModel):
     extra: Optional[dict[str, str]]
 
 
-class UserFilters(FilterModel):
+class UserFilters(BaseModel):
     id: str
     name: str
     email: Optional[str] = None
